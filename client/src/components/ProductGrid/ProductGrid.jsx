@@ -1,5 +1,5 @@
 
-function ProductCard() {
+function ProductGrid() {
   
     return (
       <>
@@ -20,4 +20,4 @@ function ProductCard() {
     )
   }
 
-export default ProductCard; 
+export default ProductGrid; 
