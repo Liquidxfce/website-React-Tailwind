@@ -1,7 +1,7 @@
 import "./App.css";
 import TopBar from "./components/topBar/topBar";
 import BottomInfo from "./components/bottomInfo/bottomInfo";
-import ProductCard from "./components/ProductCard/ProductCard";
+import ProductGrid from "./components/ProductGrid/ProductGrid";
 
 function App() {
   
@@ -12,7 +12,7 @@ function App() {
       </header>
       <main>
         <section>
-          <ProductCard/>
+          <ProductGrid/>
         </section>
       </main>
       <footer>
