@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router'
 import TopBar from "./components/topBar/topBar";
 import BottomInfo from "./components/bottomInfo/bottomInfo";
 import ProductGrid from "./components/ProductGrid/ProductGrid";
+import AdminLayout from "./layouts/AdminLayout"
+import DefaultLayout from "./layouts/DefaultLayout";
 
 function App() {
   
@@ -20,7 +22,8 @@ function App() {
         <BottomInfo />
       </footer>
       <Routes>
-        <Route></Route>
+        <Route element={<DefaultLayout />}></Route>
+        <Route path="/admin" element={<AdminLayout />}></Route>
       </Routes>
     </>
   )

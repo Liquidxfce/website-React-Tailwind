@@ -1,13 +1,12 @@
-import { Link, Outlet } from "react-router";
+import { Outlet } from "react-router";
 import BottomInfo from "../components/bottomInfo/bottomInfo";
+import TopBar from "../components/topBar/topBar";
 
 const DefaultLayout = () => {
     return (
       <>
         <header>
-            <Link to="/">
-            
-            </Link>
+          <TopBar />
         </header>
         <main>
             <Outlet />
