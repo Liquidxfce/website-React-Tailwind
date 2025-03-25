@@ -22,8 +22,14 @@ function App() {
         <BottomInfo />
       </footer>
       <Routes>
-        <Route element={<DefaultLayout />}></Route>
-        <Route path="/admin" element={<AdminLayout />}></Route>
+        <Route element={<DefaultLayout />}>
+          <Route></Route>
+          <Route path="/products/:id"></Route>
+        </Route>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route></Route>
+          <Route></Route>
+        </Route>
       </Routes>
     </>
   )
