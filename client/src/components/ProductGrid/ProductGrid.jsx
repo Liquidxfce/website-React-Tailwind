@@ -1,21 +1,26 @@
+import { Link } from "react-router";
 
-function ProductGrid() {
+function ProductGrid({ products }) {
   
     return (
       <>
-        <article>
-            <div>
-                {/* lägg till länk till productsidan + productImage */}
-                <i class="bi bi-heart"></i>
-            </div>
-            <div>
-                {/* lägg till product namn */}
-                {/* lägg till product pris */}
-            </div>
-            <div>
-                {/* lägg till product märke */}
-            </div>
-        </article>
+        <section>
+            {products.map(( product ) => (
+                <article>
+                  <div>
+                    <Link to={`/movies/${product.id}`} state={product}>
+                      <img src={product.imageUrl} alt="" />
+                    </Link>
+                    <i class="bi bi-heart"></i>
+                  </div>
+                  <div>
+                    <span>{product.productName}</span>
+                    <span>{product.price}</span>
+                  </div>
+                  <p>{product.brand}</p>
+                </article>
+            ))}
+        </section>
       </>
     )
   }
