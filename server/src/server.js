@@ -1,7 +1,8 @@
 import express from "express";
 import Database from 'better-sqlite3';
 
-const db = new Database('./db/student-manager.db', { 
+const db = new Database('./db/freakyfashion.db', { 
+  fileMustExist: true,
   verbose: console.log 
 });
 
@@ -9,20 +10,48 @@ const port = 8000;
 
 const app = express();
 
-// GET /api/students
-app.get('/api/students', (req, res) => {
+// GET /api/products
+app.get('/api/products', (req, res) => {
   
-  const students = db.prepare(`
+  const products = db.prepare(`
     SELECT id,
-           firstName,
-           lastName,
-           email,
-           phone,
-           image
-      FROM students
+           productName,
+           productDescription,
+           productImage,
+           brand,
+           price
+      FROM products
   `).all();
 
-  res.json(students);
+  res.json(products);
+});
+
+// POST /api/products
+app.post("/api/products", (req, res) => {
+
+  const product = { ...req.body };
+
+  const insert = db.prepare(`
+    INSERT INTO products (
+      productName, 
+      productDescription, 
+      productImage, 
+      brand, 
+      price
+    ) VALUES (
+      @productName, 
+      @productDescription, 
+      @productImage, 
+      @brand, 
+      @price
+    )`);
+  
+    const result = insert.run(product);
+  
+    // Returnera statuskod 201
+    res.status(201).json({ id: result.lastInsertRowid, ...product });
+
+  res.send();
 });
 
 app.listen(port, () => {

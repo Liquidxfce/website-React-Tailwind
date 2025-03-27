@@ -1,16 +1,17 @@
 
-CREATE TABLE students (
+CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  firstName TEXT NOT NULL,
-  lastName TEXT NOT NULL,
-  phone TEXT NOT NULL,
-  email TEXT NOT NULL,
-  image TEXT NOT NULL
+  productName TEXT NOT NULL,
+  productDescription TEXT NOT NULL,
+  productImage TEXT NOT NULL,
+  brand TEXT NOT NULL,
+  sku TEXT NOT NULL,
+  price TEXT NOT NULL
 );
 
-INSERT INTO students (firstName, lastName, phone, email, image) 
+INSERT INTO products (productName, productDescription, productImage, brand, sku, price) 
 VALUES 
-('John', 'Doe', '0707-1122323', 'john@doe.com', 'https://placehold.co/100'),
-('Jane', 'Doe', '0707-1122323', 'jane@doe.com', 'https://placehold.co/100'),
-('Alice', 'Doe', '0707-1122323', 'alice@doe.com', 'https://placehold.co/100'),
-('Bob', 'Doe', '0707-1122323', 'bob@doe.com', 'https://placehold.co/100');
+('Svart t-shirt', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis.', 'https://placehold.co/600x400/png', 'Levis', '222222','199 SEK'),
+('Vit t-shirt', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis.', 'https://placehold.co/600x400/png', 'Levis', '222222','199 SEK'),
+('Blå t-shirt', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis.', 'https://placehold.co/600x400/png', 'Levis', '222222','199 SEK'),
+('Grå t-shirt', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis.', 'https://placehold.co/600x400/png', 'Levis', '222222','199 SEK');
