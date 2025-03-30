@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import "./TopBar.css";
 
 function TopBar() {
   
@@ -7,7 +8,7 @@ function TopBar() {
         <div>
             <h1>hello world</h1>
             <div>
-              <Link to={"/"}>
+              <Link to="/">
                 <img src="https://placehold.co/500x100/png/?text=Freaky+Fasion" alt="Logo" />   
               </Link>
             </div>

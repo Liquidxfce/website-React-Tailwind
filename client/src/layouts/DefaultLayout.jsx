@@ -9,7 +9,7 @@ const DefaultLayout = () => {
           <TopBar />
         </header>
         <main>
-            <Outlet />
+            <Outlet /> 
         </main>
         <footer>
             <BottomInfo />
@@ -18,4 +18,4 @@ const DefaultLayout = () => {
     );
   };
   
-  export default DefaultLayout;
+export default DefaultLayout;

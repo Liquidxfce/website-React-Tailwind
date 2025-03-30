@@ -1,5 +1,6 @@
+import "./Hero.css";
 
-function Hero() {
+const Hero() => {
   
     return (
       <>

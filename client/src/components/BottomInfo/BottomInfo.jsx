@@ -4,8 +4,8 @@ function BottomInfo() {
   
     return (
       <>
-        <div>
-            
+        <div className="">
+          <small>&copy; IMDb</small>
         </div>
       </>
     )
