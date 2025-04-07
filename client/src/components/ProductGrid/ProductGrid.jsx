@@ -2,17 +2,20 @@ import { Link } from "react-router";
 import "./ProductGrid.css";
 
 function ProductGrid({ products }) {
+  if (!Array.isArray(products)) {
+    return <p>No products available.</p>; // Handle invalid or empty product list
+  }
   
     return (
       <>
         <section>
             {products.map(( product ) => (
-                <article>
+                <article key={product.id}>
                   <div>
-                    <Link to={`/movies/${product.id}`} state={product}>
-                      <img src={product.imageUrl} alt="" />
+                    <Link to={`/products/${product.id}`} state={product}>
+                      <img src={product.productImage} alt="" />
                     </Link>
-                    <i class="bi bi-heart"></i>
+                    {/* lägg till hjärta */}
                   </div>
                   <div>
                     <span>{product.productName}</span>
@@ -23,7 +26,7 @@ function ProductGrid({ products }) {
             ))}
         </section>
       </>
-    )
+    );
   }
 
 export default ProductGrid; 

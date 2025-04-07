@@ -6,7 +6,6 @@ function TopBar() {
     return (
       <>
         <div>
-            <h1>hello world</h1>
             <div>
               <Link to="/">
                 <img src="https://placehold.co/500x100/png/?text=Freaky+Fasion" alt="Logo" />   
@@ -17,8 +16,7 @@ function TopBar() {
                 <input type="text" name="search" id="search" placeholder="search"/>
               </form>
               <div>
-                <i class="bi bi-basket"></i>
-                <i class="bi bi-heart-fill"></i>
+                {/* Lägg till hjärta och varukorje */}
               </div>
             </div>
             <div>

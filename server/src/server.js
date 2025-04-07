@@ -10,6 +10,9 @@ const port = 8000;
 
 const app = express();
 
+// Middleware to parse JSON bodies
+app.use(express.json());
+
 // GET /api/products
 app.get('/api/products', (req, res) => {
   
@@ -50,8 +53,6 @@ app.post("/api/products", (req, res) => {
   
     // Returnera statuskod 201
     res.status(201).json({ id: result.lastInsertRowid, ...product });
-
-  res.send();
 });
 
 app.listen(port, () => {
