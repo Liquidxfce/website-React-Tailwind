@@ -26,10 +26,12 @@ const Home = () => {
     fetchProducts();
   }, []); // Empty dependency array ensures it runs only once when the component mounts
 
-  // Filter products based on the search term
-  const filteredProducts = products.filter((product) =>
-    product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase()) // Case-insensitive search
-  );
+  // Filter products based on the search term or show all if searchTerm is empty
+  const filteredProducts = searchTerm
+    ? products.filter((product) =>
+        product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase()) // Case-insensitive search
+      )
+    : products; // If no search term, show all products
 
   // Update the search term from the TopBar component
   const handleSearchChange = (term) => {
