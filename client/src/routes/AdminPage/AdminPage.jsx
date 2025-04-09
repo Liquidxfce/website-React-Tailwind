@@ -1,4 +1,4 @@
-import AdminTable from "../components/AdminTable/AdminTable";
+import AdminTable from "../../components/AdminTable/AdminTable";
 
 const AdminPage = () => {
 

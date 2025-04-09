@@ -1,6 +1,6 @@
 import "./Hero.css";
 
-const Hero() => {
+const Hero = () => {
   
     return (
       <>

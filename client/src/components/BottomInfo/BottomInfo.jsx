@@ -5,7 +5,7 @@ function BottomInfo() {
     return (
       <>
         <div className="">
-          <small>&copy; IMDb</small>
+          <small>&copy; Freaky Fashion</small>
         </div>
       </>
     )
