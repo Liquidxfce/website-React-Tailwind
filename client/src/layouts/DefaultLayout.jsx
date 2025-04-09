@@ -1,12 +1,12 @@
 import { Outlet } from "react-router";
 import BottomInfo from "../components/bottomInfo/bottomInfo";
-import TopBar from "../components/topBar/topBar";
+
 
 const DefaultLayout = () => {
     return (
       <>
         <header>
-          <TopBar />
+          
         </header>
         <main>
             <Outlet /> 
