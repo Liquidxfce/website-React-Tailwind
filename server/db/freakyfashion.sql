@@ -15,3 +15,6 @@ VALUES
 ('Vit t-shirt', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis.', 'https://placehold.co/400x600/png', 'Levis', '222222','199 SEK'),
 ('Blå t-shirt', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis.', 'https://placehold.co/400x600/png', 'Levis', '222222','199 SEK'),
 ('Grå t-shirt', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis.', 'https://placehold.co/400x600/png', 'Levis', '222222','199 SEK');
+
+
+DROP TABLE products;
