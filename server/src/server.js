@@ -13,21 +13,39 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+// GET /api/products?name=
 // GET /api/products
 app.get('/api/products', (req, res) => {
-  
-  const products = db.prepare(`
-    SELECT id,
-           productName,
-           productDescription,
-           productImage,
-           brand,
-           price
+  const search = req.query.search;
+  let products;
+
+  if (search) {
+    products = db.prepare(`
+      SELECT id, 
+        productName, 
+        productDescription, 
+        productImage, 
+        brand, 
+        price
       FROM products
-  `).all();
+      WHERE productName LIKE ?
+    `).all(`%${search}%`);
+  } else {
+    products = db.prepare(`
+      SELECT id, 
+        productName, 
+        productDescription, 
+        productImage, 
+        brand, 
+        price
+      FROM products
+    `).all();
+  }
 
   res.json(products);
 });
+
+
 
 // POST /api/products
 app.post("/api/products", (req, res) => {
@@ -54,6 +72,7 @@ app.post("/api/products", (req, res) => {
     // Returnera statuskod 201
     res.status(201).json({ id: result.lastInsertRowid, ...product });
 });
+
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
