@@ -17,7 +17,6 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route index element={<Home />}/>
           <Route path="/products/:id" element={<ProductDetails />} />
-          {/* TODO: fixa search */}
           <Route path="/search" element={<SearchPage />} /> 
         </Route>
         <Route path="/admin/" element={<AdminLayout />}>
