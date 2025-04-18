@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router";
 import { Link } from "react-router";
+import "./SearchPage.css";
 
 function SearchPage() {
   const [searchParams] = useSearchParams();

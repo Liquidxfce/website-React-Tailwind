@@ -1,5 +1,6 @@
 // TODO: Add functionalaty
 import { useRef } from "react";
+import "./NewProduct.css";
 
 const NewProduct = () => {
 

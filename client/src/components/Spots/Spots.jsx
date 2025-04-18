@@ -1,3 +1,4 @@
+import "./Spots.css";
 
 function Spots() {
   

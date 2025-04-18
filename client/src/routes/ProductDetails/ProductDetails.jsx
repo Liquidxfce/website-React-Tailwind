@@ -1,4 +1,5 @@
 import { useLocation } from "react-router";
+import "./ProductDetails.css";
 
 // TODO: Edit to work with freakyfasion
 
@@ -6,21 +7,21 @@ const ProductDetails = () => {
 
     const location = useLocation();
 
-    const movie = location.state;
+    const product = location.state;
 
     return (
         <>
-            <div>
-                <h1>{movie.title}</h1>
+            <article className="">
+                <h1>{product.productName}</h1>
                 <div>
-                    {movie.genre}, {movie.releaseYear}
-                    {movie.rating}
+                    <img src={product.productImage} alt="" />
                 </div>
                 <div>
-                    {movie.plot}
+                    <span>{product.productName}</span>
+                    <span>{product.price}</span>
                 </div>
-            </div>
-            <img src={movie.imageUrl} alt="" />
+                <p>{product.brand}</p>
+            </article>
         </>
     )
 }

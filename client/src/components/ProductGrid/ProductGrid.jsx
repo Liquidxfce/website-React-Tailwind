@@ -12,7 +12,7 @@ function ProductGrid({ products }) {
             {products.map(( product ) => (
                 <article key={product.id}>
                   <div>
-                    <Link to={`/products/${product.id}`} state={product}>
+                    <Link to={`/products/${product.productName}`} state={product}>
                       <img src={product.productImage} alt="" />
                     </Link>
                     {/* lägg till hjärta */}

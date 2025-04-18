@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ProductGrid from "../../components/ProductGrid/ProductGrid";
-import TopBar from "../../components/topBar/topBar"; 
 import "./Home.css";
 
 const Home = () => {
-  // State to store products, search term, and filtered products
+  // State to store products
   const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(""); // State for search term
 
   // Fetch products from API when component mounts
   useEffect(() => {
@@ -26,24 +24,12 @@ const Home = () => {
     fetchProducts();
   }, []); // Empty dependency array ensures it runs only once when the component mounts
 
-  // Filter products based on the search term or show all if searchTerm is empty
-  const filteredProducts = searchTerm
-    ? products.filter((product) =>
-        product.name && product.name.toLowerCase().includes(searchTerm.toLowerCase()) // Case-insensitive search
-      )
-    : products; // If no search term, show all products
-
-  // Update the search term from the TopBar component
-  const handleSearchChange = (term) => {
-    setSearchTerm(term); // Update the search term
-  };
-
   return (
     <>
-      <TopBar onSearchChange={handleSearchChange} /> {/* Pass the search change handler to TopBar */}
-      <ProductGrid products={filteredProducts} /> {/* Pass filtered products */}
+      <ProductGrid products={products} />
     </>
   );
 };
 
 export default Home;
+
