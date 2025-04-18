@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import "./ProductGrid.css";
+import { FaHeart } from "react-icons/fa";
 
 function ProductGrid({ products }) {
   if (!Array.isArray(products)) {
@@ -11,13 +12,14 @@ function ProductGrid({ products }) {
         <section>
             {products.map(( product ) => (
                 <article key={product.id}>
-                  <div>
+                  <div className="">
                     <Link to={`/products/${product.productName}`} state={product}>
-                      <img src={product.productImage} alt="" />
+                      <img src={product.productImage} alt="" className=""/>
                     </Link>
                     {/* lägg till hjärta */}
+                    <FaHeart className=""/>
                   </div>
-                  <div>
+                  <div className="">
                     <span>{product.productName}</span>
                     <span>{product.price}</span>
                   </div>
