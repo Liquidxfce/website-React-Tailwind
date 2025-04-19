@@ -9,15 +9,15 @@ function ProductGrid({ products }) {
   
     return (
       <>
-        <section>
+        <section className=" sm:grid grid-cols-2 lg:grid-cols-4">
             {products.map(( product ) => (
                 <article key={product.id}>
-                  <div className="">
+                  <div className=" relative">
                     <Link to={`/products/${product.productName}`} state={product}>
-                      <img src={product.productImage} alt="" className=""/>
+                      <img src={product.productImage} alt="" className=" w-full sm:px-5"/>
                     </Link>
                     {/* lägg till hjärta */}
-                    <FaHeart className=""/>
+                    <FaHeart className=" absolute text-3xl border border-solid border-black rounded-full px-1 bottom-5 right-5"/>
                   </div>
                   <div className="">
                     <span>{product.productName}</span>

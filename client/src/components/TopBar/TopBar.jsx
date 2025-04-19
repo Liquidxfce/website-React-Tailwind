@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import "./TopBar.css";
+import { FaHeart, FaShoppingBasket } from "react-icons/fa";
 
 function TopBar() {
 
@@ -20,21 +21,24 @@ function TopBar() {
   
     return (
       <>
-        <div>
-            <div>
+        <div className=" sm:flex gap-10">
+            <div className=" grow sm:w-1/3">
               <Link to="/">
-                <img src="https://placehold.co/500x100/png/?text=Freaky+Fasion" alt="Logo" />   
+                <img src="https://placehold.co/500x100/png/?text=Freaky+Fasion" alt="Logo" className=" w-full p-5"/>   
               </Link>
             </div>
-            <div>
-              <form action="/search">
-                <input type="text" name="search" id="search" placeholder="search"/>
-              </form>
-              <div>
-                {/* Lägg till hjärta och varukorje */}
+            <div className=" flex w-1/3 pt-5 my-5">
+              <div className=" w-80 h-8 border-2 border-solid border-black rounded-full">
+                <form action="/search">
+                  <input type="text" name="search" id="search" placeholder="search"/>
+                </form>
+              </div>
+              <div className=" sm:pl-[35%]">
+                <FaHeart className=" px-2 text-4xl"/>
+                <FaShoppingBasket className=" px-2 text-4xl"/>
               </div>
             </div>
-            <div>
+            <div className=" sm:hidden">
               <ul>
                 <li>Nyheter</li>
                 <li>Topplistan</li>
@@ -42,11 +46,14 @@ function TopBar() {
                 <li>Kampanjer</li>
               </ul>
             </div>
-            <div className="hidden">
-              <span>Nyheter</span>
-              <span>Topplistan</span>
-              <span>Rea</span>
-              <span>Kampanjer</span>
+            <div className=" hidden sm:flex pb-2">
+              <span className=" px-2 font-bold">Nyheter</span>
+              <span className=" px-2 font-bold">Topplistan</span>
+              <span className=" px-2 font-bold">Rea</span>
+              <span className=" px-2 font-bold">Kampanjer</span>
+            </div>
+            <div>
+              
             </div>
         </div>
       </>

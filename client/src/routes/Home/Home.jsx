@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ProductGrid from "../../components/ProductGrid/ProductGrid";
 import "./Home.css";
+import Hero from "../../components/Hero/Hero";
+import Spots from "../../components/Spots/Spots";
 
 const Home = () => {
   // State to store products
@@ -26,6 +28,8 @@ const Home = () => {
 
   return (
     <>
+      <Hero />
+      <Spots/>
       <ProductGrid products={products} />
     </>
   );

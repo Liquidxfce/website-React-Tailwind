@@ -1,16 +1,17 @@
 import { Link } from "react-router";
+import "./AdminTable.css";
 
 const AdminTable = ({ products }) => {
     return (
       <>
-        <div>
+        <div className="">
           <Link to={`admin/products/new`}>
               <span>Ny produkt</span>
           </Link>
         </div>
         <div>
           <table>
-            <thead className="border-solid border-black">
+            <thead className="">
               <tr>
                 <th>Namn</th>
                 <th>SKU</th>
