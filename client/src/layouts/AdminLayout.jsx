@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import AdminHeader from "../components/AdminHeader/AdminHeader";
 
 // TODO: Add sidebar and topbar
 
@@ -6,7 +7,7 @@ const AdminLayout = () => {
     return (
       <>
         <header>
-          <h1>Administration</h1>
+          <AdminHeader />
         </header>
         <main>
           <Outlet />
