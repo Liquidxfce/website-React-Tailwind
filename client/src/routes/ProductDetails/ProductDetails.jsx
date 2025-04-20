@@ -1,5 +1,6 @@
 import { useLocation } from "react-router";
 import "./ProductDetails.css";
+import { Link } from "react-router";
 
 // TODO: Edit to work with freakyfasion
 
@@ -11,17 +12,22 @@ const ProductDetails = () => {
 
     return (
         <>
-            <article className="">
-                <h1>{product.productName}</h1>
-                <div>
-                    <img src={product.productImage} alt="" />
+            <div className=" m-5">
+                <div className=" p-20 border border-solid border-black sm:flex sm:flex-row">
+                    <div className=" sm:flex-1 border border-solid border-black m-5">
+                        <img src={product.productImage} alt="" className=" w-full sm:scale-100"/>
+                    </div>
+                    <div className=" sm:flex-1 m-5">
+                        <h2 className=" uppercase">{product.productName}</h2>
+                        <p className=" font-bold">{product.brand}</p>
+                        <p className=" text-2xl">{product.productDescription}</p>
+                        <p className=" font-bold text-2xl">{product.price}</p>
+                        <button className=" w-full m-3 text-2xl border border-solid border-black font-bold rounded-md sm:w-10">
+                            Lägg i varukorgen
+                        </button>
+                    </div>
                 </div>
-                <div>
-                    <span>{product.productName}</span>
-                    <span>{product.price}</span>
-                </div>
-                <p>{product.brand}</p>
-            </article>
+            </div>
         </>
     )
 }

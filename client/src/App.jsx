@@ -20,7 +20,7 @@ function App() {
           <Route path="/search" element={<SearchPage />} /> 
         </Route>
         <Route path="/admin/" element={<AdminLayout />}>
-          <Route path="/admin/products/" element={<AdminPage />} />
+          <Route index element={<AdminPage />} />
           <Route path="/admin/products/new" element={<NewProduct />} />
         </Route>
       </Routes>

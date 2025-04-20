@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import BottomInfo from "../components/bottomInfo/bottomInfo";
+import BottomInfo from "../components/BottomInfo/BottomInfo";
 import TopBar from "../components/topBar/topBar";
 
 const DefaultLayout = () => {

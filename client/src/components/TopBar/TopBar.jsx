@@ -33,7 +33,7 @@ function TopBar() {
                   <input type="text" name="search" id="search" placeholder="search"/>
                 </form>
               </div>
-              <div className=" sm:pl-[35%]">
+              <div className=" flex sm:pl-[35%]">
                 <FaHeart className=" px-2 text-4xl"/>
                 <FaShoppingBasket className=" px-2 text-4xl"/>
               </div>
@@ -46,15 +46,12 @@ function TopBar() {
                 <li>Kampanjer</li>
               </ul>
             </div>
-            <div className=" hidden sm:flex pb-2">
-              <span className=" px-2 font-bold">Nyheter</span>
-              <span className=" px-2 font-bold">Topplistan</span>
-              <span className=" px-2 font-bold">Rea</span>
-              <span className=" px-2 font-bold">Kampanjer</span>
-            </div>
-            <div>
-              
-            </div>
+        </div>
+        <div className=" hidden sm:flex pb-2">
+            <span className=" px-2 font-bold">Nyheter</span>
+            <span className=" px-2 font-bold">Topplistan</span>
+            <span className=" px-2 font-bold">Rea</span>
+            <span className=" px-2 font-bold">Kampanjer</span>
         </div>
       </>
     )
