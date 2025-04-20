@@ -35,9 +35,9 @@ const NewProduct = () => {
     <>
     <div className=" flex">
       <div className=" bg-gray-400 min-h-screen">
-          <h2>Produkts</h2>
+          <h2 className=" m-5">Produkts</h2>
         </div>
-        <div>
+        <div className=" m-5">
           <form ref={formRef} onSubmit={handleSubmit}>
             <div>
               <label className=" text-2xl">Namn</label>

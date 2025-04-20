@@ -27,7 +27,7 @@ function BottomInfo() {
         <div className=" bg-gray-300 border border-solid border-black">
           <div className="">
             <div className=" hidden sm:flex space-x-4">
-              <div className="">
+              <div className=" m-5">
                 <ul>
                   <li className=" font-bold">shopping</li>
                   <li>Vinterjackor</li>
@@ -36,14 +36,14 @@ function BottomInfo() {
                   <li>Trenchcoats</li>
                 </ul>
               </div>
-              <div className="">
+              <div className=" m-5">
                 <ul>
                   <li className=" font-bold">mina sidor</li>
                   <li>Mina Ordrar</li>
                   <li>Mitt konto</li>
                 </ul>
               </div>
-              <div className="">
+              <div className=" m-5">
                 <ul>
                   <li className=" font-bold">kundtjänst</li>
                   <li>Returnpolicy</li>
