@@ -25,7 +25,8 @@ app.get('/api/products', (req, res) => {
         productName, 
         productDescription, 
         productImage, 
-        brand, 
+        brand,
+        sku. 
         price
       FROM products
       WHERE productName LIKE ?
@@ -37,6 +38,7 @@ app.get('/api/products', (req, res) => {
         productDescription, 
         productImage, 
         brand, 
+        sku,
         price
       FROM products
     `).all();
@@ -58,12 +60,14 @@ app.post("/api/products", (req, res) => {
       productDescription, 
       productImage, 
       brand, 
+      sku,
       price
     ) VALUES (
       @productName, 
       @productDescription, 
       @productImage, 
-      @brand, 
+      @brand,
+      @sku, 
       @price
     )`);
   
