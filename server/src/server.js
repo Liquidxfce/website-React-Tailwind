@@ -26,7 +26,7 @@ app.get('/api/products', (req, res) => {
         productDescription, 
         productImage, 
         brand,
-        sku. 
+        sku, 
         price
       FROM products
       WHERE productName LIKE ?
