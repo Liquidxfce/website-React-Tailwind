@@ -41,7 +41,7 @@ const ProductDetails = () => {
                         <p className=" font-bold">{product.brand}</p>
                         <p className=" text-2xl">{product.productDescription}</p>
                         <p className=" font-bold text-2xl">{product.price}</p>
-                        <button className=" w-full m-3 text-2xl border border-solid border-black font-bold rounded-md sm:w-10">
+                        <button className=" w-full m-3 text-2xl border border-solid border-black font-bold rounded-md sm:w-auto">
                             Lägg i varukorgen
                         </button>
                     </div>
