@@ -15,8 +15,8 @@ const AdminTable = ({ products = [] }) => {
                   <span>Ny produkt</span>
               </Link>
             </div>
-            <div>
-              <table>
+            <div className=" w-screen overflow-x-auto">
+              <table className=" min-w-full table-auto border-collapse border border-black">
                 <thead className=" border-black bg-gray-400">
                   <tr>
                     <th>Namn</th>
@@ -24,7 +24,7 @@ const AdminTable = ({ products = [] }) => {
                     <th>Pris</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="border-2 border-solid border-black">
                   {products.map(( product ) => (
                       <tr key={product.id}>
                         <td>{product.productName}</td>
