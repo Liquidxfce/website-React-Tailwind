@@ -45,25 +45,25 @@ const NewProduct = () => {
             </div>
             <div className="">
               <label className=" text-2xl">Beskrivning</label>
-              <textarea name="productDescription" id="productDescription" className=" border-black border-solid"></textarea>
+              <textarea name="productDescription" id="productDescription" className=" border-black border-solid border-2 block"></textarea>
             </div>
             <div>
               <label className=" text-2xl">Bild</label>
-              <input type="url" name="productImage" id="productImage" className=" border-black border-solid"/>
+              <input type="url" name="productImage" id="productImage" className=" border-black border-solid border-2 block"/>
             </div>
             <div>
               <label className=" text-2xl">Märke</label>
-              <input type="text" name="brand" id="brand" className=" border-black border-solid"/>
+              <input type="text" name="brand" id="brand" className=" border-black border-solid border-2 block"/>
             </div>
             <div>
               <label className=" text-2xl">Sku</label>
-              <input type="text" name="sku" id="sku" className=" border-black border-solid"/>
+              <input type="text" name="sku" id="sku" className=" border-black border-solid border-2 block"/>
             </div>
             <div>
               <label className=" text-2xl">Pris</label>
-              <input type="text" name="price" id="price" className=" border-black border-solid"/>
+              <input type="text" name="price" id="price" className=" border-black border-solid border-2 block"/>
             </div>
-            <button type="submit" className=" border-solid border-black">Lägg till</button>
+            <button type="submit" className=" border-solid border-black border-2 block">Lägg till</button>
           </form>
       </div>
     </div>
